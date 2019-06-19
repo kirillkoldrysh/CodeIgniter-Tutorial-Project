@@ -10,5 +10,12 @@ class Welcome extends CI_Controller
 		$data['customer'] = $this->customers_model->get_customer(3);
 
 		$this->load->view('welcome_message', $data);
+		// $this->load->view('welcome_message');
+
+	}
+
+	public function about_us()
+	{
+		$this->load->view('about_us');
 	}
 }
