@@ -7,6 +7,7 @@ class Contacts extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('url');
+        $this->load->library('form_validation');
     }
 
     public function index()
@@ -42,5 +43,39 @@ class Contacts extends CI_Controller
         $this->load('header');
         $this->load('contacts/delete');
         $this->load('footer');
+    }
+
+    public function store()
+    {
+        $rules = array(
+            array(
+                'field' => 'contact_name',
+                'label' => 'Contact Name',
+                'rules' => 'required'
+            ),
+            array(
+                'field' => 'contact_number',
+                'label' => 'Contact Number',
+                'rules' => 'required',
+                'errors' => array(
+                    'required' => 'You must provide a %s.',
+                ),
+            ),
+            array(
+                'field' => 'email_address',
+                'label' => 'Email Address',
+                'rules' => 'required'
+            )
+        );
+
+        $this->form_validation->set_rules($rules);
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('header');
+            $this->load->view('contacts/create');
+            $this->load->view('footer');
+        } else {
+            redirect(base_url('contacts'));
+        }
     }
 }

@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['contacts'] = 'contacts';
 $route['create'] = 'contacts/create';
+$route['store'] = 'contacts/store';
 $route['edit/:id'] = 'contacts/edit';
 $route['update/:id'] = 'contacts/update';
 $route['delete/:id'] = 'contacts/delete';
