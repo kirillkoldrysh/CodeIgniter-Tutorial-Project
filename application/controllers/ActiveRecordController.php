@@ -27,4 +27,14 @@ class ActiveRecordController extends CI_Controller
 
         echo 'order has succesfully been created';
     }
+
+    public function update_order() {
+        $data = [
+            'customer_name' => 'Phill'
+        ];
+
+        $this->db->where('id', 1);
+        $this->db->update('orders', $data);
+        echo 'order has sussessfully been updated';
+    }
 }
