@@ -11,30 +11,30 @@ class Contacts extends CI_Controller
 
     public function index()
     {
-        $this->load('header');
-        $this->load('contacts/index');
-        $this->load('footer');
+        $this->load->view('header');
+        $this->load->view('contacts/index');
+        $this->load->view('footer');
     }
 
     public function create()
     {
-        $this->load('header');
-        $this->load('contacts/create');
-        $this->load('footer');
+        $this->load->view('header');
+        $this->load->view('contacts/create');
+        $this->load->view('footer');
     }
 
     public function edit($id)
     {
-        $this->load('header');
-        $this->load('contacts/edit');
-        $this->load('footer');
+        $this->load->view('header');
+        $this->load->view('contacts/edit');
+        $this->load->view('footer');
     }
 
     public function update($id)
     {
-        $this->load('header');
-        $this->load('contacts/update');
-        $this->load('footer');
+        $this->load->view('header');
+        $this->load->view('contacts/update');
+        $this->load->view('footer');
     }
 
     public function delete($id)

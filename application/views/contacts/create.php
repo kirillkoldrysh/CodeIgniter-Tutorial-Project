@@ -1,1 +1,3 @@
-<?php
+<div class="column">
+    Create content goes here...
+</div>

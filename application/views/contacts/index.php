@@ -1,1 +1,3 @@
-<?php
+<div class="column">
+    Index content goes here...
+</div>
