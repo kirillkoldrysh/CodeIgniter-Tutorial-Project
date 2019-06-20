@@ -35,6 +35,13 @@ class ActiveRecordController extends CI_Controller
 
         $this->db->where('id', 1);
         $this->db->update('orders', $data);
-        echo 'order has sussessfully been updated';
+        echo 'order has successfully been updated';
+    }
+
+    public function delete_order() {
+        $this->db->where('id', 3);
+        $this->db->delete('orders');
+
+        echo 'order has successfully been deleted';
     }
 }
