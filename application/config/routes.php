@@ -62,5 +62,6 @@ $route['ar'] = 'ActiveRecordController';
 $route['ar/insert'] = 'ActiveRecordController/store_order';
 $route['ar/update'] = 'ActiveRecordController/update_order';
 $route['ar/delete'] = 'ActiveRecordController/delete_order';
+$route['cities'] = 'cities';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;
