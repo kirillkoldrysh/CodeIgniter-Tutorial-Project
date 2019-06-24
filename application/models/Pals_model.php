@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+require_once __DIR__ . '/BaseModel.php';
+
 class Pals_model extends BaseModel {
     protected $table = 'pals';
 
@@ -22,5 +24,6 @@ class Pals_model extends BaseModel {
         $this->db->from('pals');
         $this->db->join('cities', 'pals.city_id = cities.id');
         $query = $this->db->get();
+        return $query->result();
     }
 }

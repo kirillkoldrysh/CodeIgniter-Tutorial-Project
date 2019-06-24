@@ -1,7 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Cities extends BaseModel {
+require_once __DIR__ . '/BaseModel.php';
+
+class Cities_model extends BaseModel {
     protected $table = 'cities';
 
     public function __construct() {
